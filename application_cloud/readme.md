@@ -19,5 +19,5 @@ Nelle cartelle SERVER e WEB ci sono dei readme utili alla comprensione del codic
 
 ### altro
 concurrently
-this npm is necessary to run both server together
-postdev script i don't know yet why not work well
+this npm is necessary to run both server together - 
+"postdev script" i don't know yet why not work well!
