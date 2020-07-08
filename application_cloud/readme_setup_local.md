@@ -1,15 +1,15 @@
 ### start
 Settare con i propri dati il file .env nella cartella SERVER seguendo il file di esempio .env.example
-- DB connection
-- Azure keys
-- Server SMTP - MAIL
-Creare nel Database un db con lo stesso nome inserito nel file .env
+- Connection to Database
+- Azure API keys
+- SMTP - MAIL server
+Create a Database using the same name you specify in the .env file
 
 ### go to the root folder
-### run follow command to download & install dependencies & run servers
+### run the folliwing command to download & install all the required dependencies
 npm run setup
 
-### run this command to serve applications in localhost
+### run this command to serve the applications in localhost
 npm run dev
 
-### go to localhost:8000 for server && localhost:1234 for front-end
+### The server can be accessed at localhost:8000, open localhost:1234 in your browser to access the front-end
