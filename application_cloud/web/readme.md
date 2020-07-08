@@ -1,10 +1,9 @@
 ## if export not working use chrome please! Not all browsers support ES6 export
 
 ## Appunti sull'implementazione
-Il front-end è stato realizzato in maniera approssimativa, di fatto non vi è alcuna gestione delle route vista l'implementazione in puro HTML-CSS-JavaScript. (sono stati necessari "barbatrucchi" per le route come la dichiarazione di tag <a> invisibili con href per creare l'albero delle connessioni utili al bundler per collegare le pagine html)
-Questo è dovuto ad un non utilizzo di framework utili all'implementazione in tal senso.
-Inoltre le fetch risultano lente ed è stato fatto un uso minimale del sessionStorage salvando unicamente il token JWT anzi che salvare anche gli altri dati tornati per evitare chiamate costanti al server con ovvio rallentamento nell'esecuzione.
-I motivi di una tale implementazione sono dovuti ad una cattiva gestione da parte del nostro gruppo del tempo.
+Il front-end è stato realizzato in maniera approssimativa, di fatto non vi è alcuna gestione delle route vista l'implementazione in puro HTML-CSS-JavaScript. (si è fatto uso di dichiarazioni di tag <a> invisibili con href per creare l'albero delle connessioni utili al bundler per collegare le pagine html)
+Inoltre le fetch risultano lente ed è stato fatto un uso minimale del sessionStorage salvando unicamente il token JWT anzicchè salvare anche gli altri dati tornati per evitare chiamate costanti al server con ovvio rallentamento nell'esecuzione.
+
 
 La pagina iniziale è la index.html che rappresenta il login.
 
