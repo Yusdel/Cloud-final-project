@@ -1,0 +1,16 @@
+{
+  "name": "application_cloud",
+  "version": "1.0.0",
+  "description": "cloud project",
+  "main": "index.js",
+  "scripts": {
+    "setup": "bash scripts/setup_local.sh",
+    "dev": "concurrently \"cd server && php artisan serve\" \"cd web && parcel index.html\"",
+    "postdev": "start chrome http://localhost:1234"
+  },
+  "author": "Anonimus for now",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0"
+  }
+}

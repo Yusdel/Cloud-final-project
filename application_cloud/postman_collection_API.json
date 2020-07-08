@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "bf5709fa-1cc8-4a67-ac48-7aed8fdd5240",
+		"name": "server_cloud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "88f2406e-f609-456f-bbd3-f7c5417616a7",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Yusdel Morales",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "testcloudproject4@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678",
+							"contentType": "",
+							"description": "the name will be necessary password_confirmation",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "testcloudproject4@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2ZkYTE3MzE2M2FlOWMzNTBkYTAyN2IxODMxMmEyYTYwNzc5MmQ3ZTAxZWNjYTQ4MjFhMWZmOGM2ZmNlY2Y1MDc3YzU4YjhhM2M5ZDIyZDQiLCJpYXQiOjE1OTExMDkyMTMsIm5iZiI6MTU5MTEwOTIxMywiZXhwIjoxNjIyNjQ1MjEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.dyChGBHXHTnlpCw5BcaYyCOuNMlKhRisEOkuYdQl3tX74sJ1MjltNlQX5ivaHhNO-AHepQGmIB3KuYLjPlXAdfNC0ffcf6Ez_WAQcfe19QM2GYlSNyUm0K74AEvTYVZht_CYpEE3EedVsA2x7ZieN9Y84RCacWSkBc1WY50OIaaYK-_xMEsIqCAww5kltzdqie84JrD82NWd8Rsr7-N9E0xlwbhGOSpWYZ4M8RXhg1fnsBNnH95RobHq2zwKJOVms1z3wv0ax_-ec_c7V4Xgjb2VVAVz7QvoqJvepUDyaJGDyn2ZBuuKGeDVzOyszBTc0J8_XISlCMfXGI57R7RHXMuf7LiyfBiSq9CUmfebGJu5kP4bnSjh6KvZxrZRUEQsUxw3yjIE2ZEt7T1IP1-l8iPrbMjBTi0B563SUitZDpuu9DQMe8MUeB0KbYg-gilMy2dadX9lGc8YU-0GKJQYVCx_Ekzt0188vGghd4WP-cCNDLKzJuE3G_ktmyCSHISnVkAVf4odLZd6teMs3PhAm64epChAAZd1IZq2rq0q-RiQKdRhGavghoZEUWSVE2gDfU6Xz6bFLQ6rUN0Ar1NbV3ED8xRHWFoeHud_xY-c1YhFv1FFRvYQmqrOjHFbk1tMeltjqmj0NYRq7H_XAjDnUIojmeXg-UAppA2v4Ig3rXM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/auth/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2ZkYTE3MzE2M2FlOWMzNTBkYTAyN2IxODMxMmEyYTYwNzc5MmQ3ZTAxZWNjYTQ4MjFhMWZmOGM2ZmNlY2Y1MDc3YzU4YjhhM2M5ZDIyZDQiLCJpYXQiOjE1OTExMDkyMTMsIm5iZiI6MTU5MTEwOTIxMywiZXhwIjoxNjIyNjQ1MjEzLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.dyChGBHXHTnlpCw5BcaYyCOuNMlKhRisEOkuYdQl3tX74sJ1MjltNlQX5ivaHhNO-AHepQGmIB3KuYLjPlXAdfNC0ffcf6Ez_WAQcfe19QM2GYlSNyUm0K74AEvTYVZht_CYpEE3EedVsA2x7ZieN9Y84RCacWSkBc1WY50OIaaYK-_xMEsIqCAww5kltzdqie84JrD82NWd8Rsr7-N9E0xlwbhGOSpWYZ4M8RXhg1fnsBNnH95RobHq2zwKJOVms1z3wv0ax_-ec_c7V4Xgjb2VVAVz7QvoqJvepUDyaJGDyn2ZBuuKGeDVzOyszBTc0J8_XISlCMfXGI57R7RHXMuf7LiyfBiSq9CUmfebGJu5kP4bnSjh6KvZxrZRUEQsUxw3yjIE2ZEt7T1IP1-l8iPrbMjBTi0B563SUitZDpuu9DQMe8MUeB0KbYg-gilMy2dadX9lGc8YU-0GKJQYVCx_Ekzt0188vGghd4WP-cCNDLKzJuE3G_ktmyCSHISnVkAVf4odLZd6teMs3PhAm64epChAAZd1IZq2rq0q-RiQKdRhGavghoZEUWSVE2gDfU6Xz6bFLQ6rUN0Ar1NbV3ED8xRHWFoeHud_xY-c1YhFv1FFRvYQmqrOjHFbk1tMeltjqmj0NYRq7H_XAjDnUIojmeXg-UAppA2v4Ig3rXM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/auth/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request_password_reset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "testcloudproject4@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/password/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"password",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "password_reset",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "testcloudproject4@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "87654321",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "87654321",
+							"type": "text"
+						},
+						{
+							"key": "token",
+							"value": "vEqqTQk6pHjPMCssD4TwqHbdIeTZXi4d3nB4Qd42YBt7nNMs4JSs6vPQzJma",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/password/reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"password",
+						"reset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store_image",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWJhZDRkMDc5OWFmNmI0OWM1ZGUyN2MwYTJmMWU4YjY5ZDY5MmFkNGJiNjc0YmVjZGRkMzRkNmNhNzdlYTgxZmJmNTRjYTI1MTI3YzFjMTQiLCJpYXQiOjE1OTE1NTA0MDcsIm5iZiI6MTU5MTU1MDQwNywiZXhwIjoxNjIzMDg2NDA3LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.Rd04exssPMOfF8NDs1K2wD3v9bk-7hWHMrvkyqNSOGdMhRG9f_wK6ObYpu5n7Y3lglNE7eg0_Rk_zISe8H9I01cqAWgVNoXUFhHvKX8Ky82MSAVRCKhS9SdEKAaCT7Mn7xCAJdW-aLv3My38AmxUheurHD_tBxtaxhuPXRAvghBdXbhLoxBXlOOoZbxHHQD7OqW1UyLO7q720Czh8IYGsvMmSpjKOTkBzqdKFLZmh9bZgM-IX_-z7Z1JmmUF1UlzsxxKSxnjqItg9eI3VEpclE8y9l-yAsZyNJxVIAEIOsC4b8puXBScV4f6L6bdrcP9jKn0WmW7-c71fBgxEqjUTUbR9sv-BJp1A8HCeTnPCbdiEak4iHp1vQDco-IQUBkQtj7JGy44SAdHhgWO-yLl1J1bjsdT9aYA23H3jjiGHnsc2TV9O7BWDuZ-Vf3meXoQnEWw0ppTX5-tWZUc9ZGKrDwdJ1UFpc65yfTxJ40irJt8wMvTvibT01G1Kw95M2d1nt3HWgN08Y1Vq9yGhHEdFIhyNC2j_p_e4xIPFZ9RbkIwfg6RYB94MiF48JFPby4PtGGUXcvO5yvOs8FdRT8yqkqTo5rcXk_7facH-PGTyDG23-rQOtvqWfWipVawF2f4yP4s9NUv-DwHLKrOvRLAUXG7oBCik7ycI9RERaaRbCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/Yusdel Morales/Desktop/Icon/tokyo.jpg"
+						},
+						{
+							"key": "image_name",
+							"value": "tokyo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_list_blobs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWJhZDRkMDc5OWFmNmI0OWM1ZGUyN2MwYTJmMWU4YjY5ZDY5MmFkNGJiNjc0YmVjZGRkMzRkNmNhNzdlYTgxZmJmNTRjYTI1MTI3YzFjMTQiLCJpYXQiOjE1OTE1NTA0MDcsIm5iZiI6MTU5MTU1MDQwNywiZXhwIjoxNjIzMDg2NDA3LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.Rd04exssPMOfF8NDs1K2wD3v9bk-7hWHMrvkyqNSOGdMhRG9f_wK6ObYpu5n7Y3lglNE7eg0_Rk_zISe8H9I01cqAWgVNoXUFhHvKX8Ky82MSAVRCKhS9SdEKAaCT7Mn7xCAJdW-aLv3My38AmxUheurHD_tBxtaxhuPXRAvghBdXbhLoxBXlOOoZbxHHQD7OqW1UyLO7q720Czh8IYGsvMmSpjKOTkBzqdKFLZmh9bZgM-IX_-z7Z1JmmUF1UlzsxxKSxnjqItg9eI3VEpclE8y9l-yAsZyNJxVIAEIOsC4b8puXBScV4f6L6bdrcP9jKn0WmW7-c71fBgxEqjUTUbR9sv-BJp1A8HCeTnPCbdiEak4iHp1vQDco-IQUBkQtj7JGy44SAdHhgWO-yLl1J1bjsdT9aYA23H3jjiGHnsc2TV9O7BWDuZ-Vf3meXoQnEWw0ppTX5-tWZUc9ZGKrDwdJ1UFpc65yfTxJ40irJt8wMvTvibT01G1Kw95M2d1nt3HWgN08Y1Vq9yGhHEdFIhyNC2j_p_e4xIPFZ9RbkIwfg6RYB94MiF48JFPby4PtGGUXcvO5yvOs8FdRT8yqkqTo5rcXk_7facH-PGTyDG23-rQOtvqWfWipVawF2f4yP4s9NUv-DwHLKrOvRLAUXG7oBCik7ycI9RERaaRbCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/auth/list/blobs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"list",
+						"blobs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "analize_img_by_name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWJhZDRkMDc5OWFmNmI0OWM1ZGUyN2MwYTJmMWU4YjY5ZDY5MmFkNGJiNjc0YmVjZGRkMzRkNmNhNzdlYTgxZmJmNTRjYTI1MTI3YzFjMTQiLCJpYXQiOjE1OTE1NTA0MDcsIm5iZiI6MTU5MTU1MDQwNywiZXhwIjoxNjIzMDg2NDA3LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.Rd04exssPMOfF8NDs1K2wD3v9bk-7hWHMrvkyqNSOGdMhRG9f_wK6ObYpu5n7Y3lglNE7eg0_Rk_zISe8H9I01cqAWgVNoXUFhHvKX8Ky82MSAVRCKhS9SdEKAaCT7Mn7xCAJdW-aLv3My38AmxUheurHD_tBxtaxhuPXRAvghBdXbhLoxBXlOOoZbxHHQD7OqW1UyLO7q720Czh8IYGsvMmSpjKOTkBzqdKFLZmh9bZgM-IX_-z7Z1JmmUF1UlzsxxKSxnjqItg9eI3VEpclE8y9l-yAsZyNJxVIAEIOsC4b8puXBScV4f6L6bdrcP9jKn0WmW7-c71fBgxEqjUTUbR9sv-BJp1A8HCeTnPCbdiEak4iHp1vQDco-IQUBkQtj7JGy44SAdHhgWO-yLl1J1bjsdT9aYA23H3jjiGHnsc2TV9O7BWDuZ-Vf3meXoQnEWw0ppTX5-tWZUc9ZGKrDwdJ1UFpc65yfTxJ40irJt8wMvTvibT01G1Kw95M2d1nt3HWgN08Y1Vq9yGhHEdFIhyNC2j_p_e4xIPFZ9RbkIwfg6RYB94MiF48JFPby4PtGGUXcvO5yvOs8FdRT8yqkqTo5rcXk_7facH-PGTyDG23-rQOtvqWfWipVawF2f4yP4s9NUv-DwHLKrOvRLAUXG7oBCik7ycI9RERaaRbCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Length",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image_name",
+							"value": "tokyo.jpg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/blob/analize/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"blob",
+						"analize",
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_shared_blob_url",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWJhZDRkMDc5OWFmNmI0OWM1ZGUyN2MwYTJmMWU4YjY5ZDY5MmFkNGJiNjc0YmVjZGRkMzRkNmNhNzdlYTgxZmJmNTRjYTI1MTI3YzFjMTQiLCJpYXQiOjE1OTE1NTA0MDcsIm5iZiI6MTU5MTU1MDQwNywiZXhwIjoxNjIzMDg2NDA3LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.Rd04exssPMOfF8NDs1K2wD3v9bk-7hWHMrvkyqNSOGdMhRG9f_wK6ObYpu5n7Y3lglNE7eg0_Rk_zISe8H9I01cqAWgVNoXUFhHvKX8Ky82MSAVRCKhS9SdEKAaCT7Mn7xCAJdW-aLv3My38AmxUheurHD_tBxtaxhuPXRAvghBdXbhLoxBXlOOoZbxHHQD7OqW1UyLO7q720Czh8IYGsvMmSpjKOTkBzqdKFLZmh9bZgM-IX_-z7Z1JmmUF1UlzsxxKSxnjqItg9eI3VEpclE8y9l-yAsZyNJxVIAEIOsC4b8puXBScV4f6L6bdrcP9jKn0WmW7-c71fBgxEqjUTUbR9sv-BJp1A8HCeTnPCbdiEak4iHp1vQDco-IQUBkQtj7JGy44SAdHhgWO-yLl1J1bjsdT9aYA23H3jjiGHnsc2TV9O7BWDuZ-Vf3meXoQnEWw0ppTX5-tWZUc9ZGKrDwdJ1UFpc65yfTxJ40irJt8wMvTvibT01G1Kw95M2d1nt3HWgN08Y1Vq9yGhHEdFIhyNC2j_p_e4xIPFZ9RbkIwfg6RYB94MiF48JFPby4PtGGUXcvO5yvOs8FdRT8yqkqTo5rcXk_7facH-PGTyDG23-rQOtvqWfWipVawF2f4yP4s9NUv-DwHLKrOvRLAUXG7oBCik7ycI9RERaaRbCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name_image",
+							"value": "tokio.jpg",
+							"type": "text"
+						},
+						{
+							"key": "numero_giorni",
+							"value": "8",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/blob/share/image",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"blob",
+						"share",
+						"image"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

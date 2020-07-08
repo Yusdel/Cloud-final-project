@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="./src/index.js"></script>
+</head>
+
+<body>
+    <div id="container-login">
+        <div id="title">
+            <i class="material-icons lock">account_circle</i> Login
+        </div>
+
+        <form action="./views/home.html" method="POST" name="login" id="login_form">
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">face</i>
+                </div>
+                <input id="email" name="email" placeholder="email" type="email" required class="validate" autocomplete="off">
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="input">
+                <div class="input-addon">
+                    <i class="material-icons">vpn_key</i>
+                </div>
+                <input id="password" name="password" placeholder="Password" type="password" required class="validate"
+                    autocomplete="off">
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" name="checkbox">
+                <span style="color: #DDD">Remember Me</span>
+            </div>
+
+            <input type="submit" value="Log In" />
+        </form>
+
+        <div class="forgot-password">
+            <a href="#">Forgot your password?</a>
+        </div>
+        <div class="register">
+            Don't have an account yet?
+            <a href="./views/register.html"><button id="register-link">Register here</button></a>
+        </div>
+
+        <div class="elements">
+            <div style="text-align: center; width: 100%;">
+                <a href="#"
+                    style="color: rgb(0, 0, 0); font-size: 11px; font-weight: normal; max-width: 135px; padding: 4px 7px;">Info</a>
+                <a href="#" target=""
+                    style="color: rgb(0, 0, 0); font-size: 11px; font-weight: normal; max-width: 135px; padding: 4px 7px;">Terms of service</a>
+                <a href="#" target=""
+                    style="color: rgb(0, 0, 0); font-size: 11px; font-weight: normal; max-width: 135px; padding: 4px 7px;">Privacy Policy</a>
+            </div>
+        </div>
+
+        <!-- to routing because is pure js css html-->
+        <a href="./views/home.html"></a>
+    </div>
+</body>
+
+</html>
