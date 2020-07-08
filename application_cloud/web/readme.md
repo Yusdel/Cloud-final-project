@@ -29,7 +29,7 @@ Pur avendo avuto molto tempo, una gestione sbagliata di:
     - suddivisione dei ruoli e dei compiti
     - uso di strumenti di condivisione del progetto
     - tempo dedicato al progetto
-    - comunicazione nel team
+    - comunicazione nel team, 
 hanno portato ad una realizzazione parziale del lavoro. Tuttavia il gruppo ha deciso con questo progetto di testare le proprie capacità, usando tecnologie non studiate, implementare architetture non viste e impostando un'automazione nel setup dell'ambiente locale per facilitarne la condivisione. 
 
 Ci scusiamo per il lavoro parziale effettuato!
