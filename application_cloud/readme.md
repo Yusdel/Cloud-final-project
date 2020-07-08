@@ -6,7 +6,7 @@ PER IMPOSTARE L'AMBIENTE IN MODO AUTOMATICO SEGUIRE LE ISTRUZIONI DEL FILE "read
 - PHP ^7.3
 - Composer
 
-Se si desidera impostare l'ambiente manualmente, seguire le istruzioni dei "readme" presenti nell'app server e in web.
+Se si desidera impostare l'ambiente manualmente, seguire le istruzioni dei "readme_setup" presenti nell'app server e in web.
 
 ## Informazioni generali  
 Il sito essendo incompleto è lento, quindi durante la fase di test da browser avere pazienza, le chiamate durano circa 2/3 secondi
